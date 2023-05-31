@@ -7,7 +7,7 @@ import Store from "./Components/Store/Store";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 
 function App() {
-  const { cart, setCart } = useState([]);
+  const [cart, setCart] = useState([]);
   const addToCart = (currentCart, item) => {
     setCart([...currentCart, item]);
   };
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Nav cartSize={cart} />
+        <Nav cartSize={cart.length} />
         <ShoppingCart cart={cart} setCart={setCart} />
         <Routes>
           <Route exact path="/" element={<Home />} />

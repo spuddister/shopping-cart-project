@@ -2,15 +2,11 @@
 // import { FaShoppingCart } from "react-icons/fa";
 import React from "react";
 
-function Item() {
+function Item({ itemData }) {
+  console.log("item info: ", itemData.title);
   return (
     <div className="item-card">
-      <h1>Item</h1>
-      <ul>
-        <li>Thing 1</li>
-        <li>$40</li>
-        <li>Add to cart</li>
-      </ul>
+      <p>{itemData.title}</p>
     </div>
   );
 }

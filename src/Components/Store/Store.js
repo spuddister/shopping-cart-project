@@ -1,22 +1,37 @@
 import "./Store.css";
 import React from "react";
 import ItemList from "./ItemList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Store(props) {
-  const { isLoading, setIsLoading } = useState(false);
-
-  // fetch("https://api.storerestapi.com/products/running-sneaker")
-  //   .then((response) => response.json())
-  //   .then((json) => console.log(json))
-  //   .then((json) => {
-  //     setIsLoading(false);
-  //   });
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [storeContent, setStoreContent] = useState([]);
+  useEffect(() => {
+    function fetchStoreItems() {
+      setIsLoaded(false);
+      const fetchedStoreContent = fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((json) => {
+          // console.log("inside fetch:", json);
+          setStoreContent(json);
+          setIsLoaded(true);
+        });
+    }
+    try {
+      fetchStoreItems();
+    } catch (error) {
+      console.log("Failed to load list.");
+    }
+  }, []);
 
   return (
     <div className="Store">
       <h1>Store</h1>
-      {isLoading ? <div>loading icon</div> : <ItemList />}
+      {isLoaded ? (
+        <ItemList storeContent={storeContent} />
+      ) : (
+        <div>item list is loading icon</div>
+      )}
     </div>
   );
 }
