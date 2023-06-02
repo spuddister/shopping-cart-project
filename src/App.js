@@ -7,14 +7,16 @@ import Store from "./Components/Store/Store";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState({});
 
+  //write test for both addtoCart and removefromcart
   const addToCart = (item) => {
     let tempCart = { ...cart };
     if (tempCart[item.id] !== undefined) {
-      tempCart[item.id].count += tempCart[item.id].count;
+      tempCart[item.id].count = tempCart[item.id].count + 1;
     } else {
       tempCart[item.id] = item;
+      tempCart[item.id].count = 1;
     }
     setCart(tempCart);
   };
@@ -27,7 +29,7 @@ function App() {
     if (tempCart[item.id].count <= 1) {
       delete tempCart[item.id];
     } else {
-      tempCart[item.id].count -= tempCart[item.id].count;
+      tempCart[item.id].count = tempCart[item.id].count - 1;
     }
     setCart(tempCart);
   };
