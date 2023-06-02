@@ -3,7 +3,7 @@ import React from "react";
 import ItemList from "./ItemList";
 import { useState, useEffect } from "react";
 
-function Store(props) {
+function Store({ addToCart, removeFromCart }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [storeContent, setStoreContent] = useState([]);
   useEffect(() => {
@@ -28,7 +28,11 @@ function Store(props) {
     <div className="Store">
       <h1>Store</h1>
       {isLoaded ? (
-        <ItemList storeContent={storeContent} />
+        <ItemList
+          storeContent={storeContent}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+        />
       ) : (
         <div>item list is loading icon</div>
       )}

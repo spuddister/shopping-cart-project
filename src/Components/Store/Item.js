@@ -2,8 +2,8 @@
 // import { FaShoppingCart } from "react-icons/fa";
 import React from "react";
 
-function Item({ itemData }) {
-  console.log("item info: ", itemData.title);
+function Item({ itemData, addToCart, removeFromCart }) {
+  console.log("item info: ", itemData);
   return (
     <div className="item-card">
       <p>{itemData.title}</p>

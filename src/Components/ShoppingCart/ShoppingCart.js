@@ -1,9 +1,12 @@
 import "./ShoppingCart.css";
+import CartItem from "./CartItem/CartItem";
 
-function ShoppingCart() {
+function ShoppingCart({ cart, addToCart, removeFromCart }) {
   return (
     <div className="ShoppingCart">
-      <h1>ShoppingCart</h1>
+      {cart.map((item) => (
+        <CartItem addToCart={addToCart} removeFromCart={removeFromCart} />
+      ))}
     </div>
   );
 }
