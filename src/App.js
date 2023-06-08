@@ -8,6 +8,7 @@ import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 
 function App() {
   const [cart, setCart] = useState({});
+  const [cartVisible, setCartVisible] = useState(false);
 
   //write test for both addtoCart and removefromcart
   const addToCart = (item) => {
@@ -34,14 +35,20 @@ function App() {
     setCart(tempCart);
   };
 
+  const toggleCartVisible = () => {
+    cartVisible ? setCartVisible(false) : setCartVisible(true);
+  };
+
   return (
     <BrowserRouter>
-      <div className="app">
-        <Nav cartSize={cart.length} />
+      <div className="App">
+        <Nav cart={cart} toggleCartVisible={toggleCartVisible} />
         <ShoppingCart
+          modalClass={cartVisible ? "modal-out" : "modal-in"}
           cart={cart}
           addToCart={addToCart}
           removeFromCart={removeFromCart}
+          toggleCartVisible={toggleCartVisible}
         />
         <Routes>
           <Route exact path="/" element={<Home />} />

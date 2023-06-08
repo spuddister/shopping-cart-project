@@ -9,7 +9,7 @@ function Store({ addToCart, removeFromCart }) {
   useEffect(() => {
     function fetchStoreItems() {
       setIsLoaded(false);
-      const fetchedStoreContent = fetch("https://fakestoreapi.com/products")
+      fetch("https://fakestoreapi.com/products")
         .then((res) => res.json())
         .then((json) => {
           // console.log("inside fetch:", json);

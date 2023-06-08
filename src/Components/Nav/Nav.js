@@ -2,7 +2,13 @@ import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 
-function Nav() {
+function Nav({ cart, toggleCartVisible }) {
+  const itemCount = Object.keys(cart)[0]
+    ? Object.keys(cart)
+        .map((key) => cart[key].count)
+        .reduce((sum, next) => sum + next)
+    : 0;
+
   return (
     <div className="Nav">
       <div className="logo-wrapper">
@@ -26,12 +32,13 @@ function Nav() {
           Store
         </NavLink>
         <NavLink
-          onClick={() => console.log("Shopping cart ON")}
+          onClick={() => toggleCartVisible()}
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
           <FaShoppingCart />
+          <span className="item-count">{itemCount}</span>
         </NavLink>
       </div>
     </div>

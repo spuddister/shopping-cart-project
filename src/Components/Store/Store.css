@@ -1,0 +1,10 @@
+.Store {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+  width: 100%;
+  overflow: scroll;
+  border: red solid 1px;
+  padding-right: 30%;
+}
