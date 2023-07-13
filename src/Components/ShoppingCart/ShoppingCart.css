@@ -1,13 +1,14 @@
 .ShoppingCart {
-  position: absolute;
-  top: 90px;
-  height: 100%;
-  width: 30%;
+  min-width: 350px;
+  max-width: 450px;
 }
 .modal-out {
-  right: 0;
-  background-color: aquamarine;
+  visibility: visible;
+  opacity: 100;
+
 }
 .modal-in {
-  right: -100%;
+  visibility: collapse;
+  opacity: 0;
 }
+

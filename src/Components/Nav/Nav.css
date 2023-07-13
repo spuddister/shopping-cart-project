@@ -6,10 +6,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  /* max-width: 80rem; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  max-height: 90px;
+  height: 70px;
 }
 
 .links-wrapper {
@@ -22,6 +19,7 @@
 .Nav a {
   text-decoration: none;
   color: aliceblue;
+  width: 3em;
 }
 
 .Nav a .active {
