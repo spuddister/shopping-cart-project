@@ -43,6 +43,13 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Nav cart={cart} toggleCartVisible={toggleCartVisible} />
+        <ShoppingCart
+          cartClass={cartVisible ? "cart-visible" : "cart-hidden"}
+          cart={cart}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+          toggleCartVisible={toggleCartVisible}
+        />
         <div className="page-container">
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -53,15 +60,7 @@ function App() {
               }
             />
           </Routes>
-          <ShoppingCart
-          modalClass={cartVisible ? "modal-out" : "modal-in"}
-          cart={cart}
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          toggleCartVisible={toggleCartVisible}
-        />
         </div>
-        
       </div>
     </BrowserRouter>
   );

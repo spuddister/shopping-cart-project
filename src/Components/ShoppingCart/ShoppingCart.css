@@ -1,14 +1,19 @@
 .ShoppingCart {
-  min-width: 350px;
-  max-width: 450px;
-}
-.modal-out {
-  visibility: visible;
-  opacity: 100;
-
-}
-.modal-in {
-  visibility: collapse;
+  width: 25em;
+  height: 100vh;
+  overflow: scroll;
+  transition: ease-in-out 250ms;
+  transition-property: opacity, transform;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: grey;
   opacity: 0;
 }
+.cart-visible {
+  opacity: 1;
+  transform: translateX(-100%);
+}
 
+@media only screen and (max-width: 600px) {
+}

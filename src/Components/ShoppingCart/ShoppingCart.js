@@ -3,7 +3,7 @@ import CartItem from "./CartItem/CartItem";
 import React from "react";
 
 function ShoppingCart({
-  modalClass,
+  cartClass,
   cart,
   addToCart,
   removeFromCart,
@@ -11,7 +11,7 @@ function ShoppingCart({
 }) {
   const cartArray = Object.keys(cart);
   return (
-    <div className={`ShoppingCart ${modalClass}`}>
+    <div className={`ShoppingCart ${cartClass}`}>
       <h1>Shopping Cart</h1>
       <button onClick={() => toggleCartVisible()}>x</button>
       {cartArray.length === 0 ? (
