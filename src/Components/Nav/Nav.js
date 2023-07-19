@@ -12,7 +12,10 @@ function Nav({ cart, toggleCartVisible }) {
   return (
     <div className="Nav">
       <div className="logo-wrapper">
-        <h1>Fabulous Fakes</h1>
+        <h1>
+          <span className="f-span">F</span>abulous{" "}
+          <span className="f-span">F</span>akes
+        </h1>
       </div>
       <div className="links-wrapper">
         <NavLink to="/" className="isActive">

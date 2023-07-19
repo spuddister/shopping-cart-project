@@ -61,6 +61,9 @@ function App() {
             />
           </Routes>
         </div>
+        <footer>
+          <div className="footer-details">this is the footer</div>
+        </footer>
       </div>
     </BrowserRouter>
   );
