@@ -12,31 +12,14 @@ function Nav({ cart, toggleCartVisible }) {
   return (
     <div className="Nav">
       <div className="logo-wrapper">
-        <h1>Nav</h1>
+        <h1>Fabulous Fakes</h1>
       </div>
       <div className="links-wrapper">
-        <NavLink
-          to="/"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-        >
+        <NavLink to="/" className="isActive">
           Home
         </NavLink>
-        <NavLink
-          to="/store"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-        >
-          Store
-        </NavLink>
-        <NavLink
-          onClick={() => toggleCartVisible()}
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-        >
+        <NavLink to="/store">Store</NavLink>
+        <NavLink onClick={() => toggleCartVisible()} className="cart-button">
           <FaShoppingCart />
           <span className="item-count">{itemCount}</span>
         </NavLink>

@@ -1,27 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+}
+
 .Nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto minmax(200px, 4fr) auto 1fr;
+  font-family: "Ubuntu", sans-serif;
   color: aliceblue;
-  background-color: rgb(0, 0, 126);
+  background-color: rgb(26, 26, 230);
   position: sticky;
   top: 0;
   width: 100%;
   height: 70px;
 }
 
+.logo-wrapper {
+  grid-column: 2 / 3;
+  font-size: 1.25em;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 300;
+}
+
 .links-wrapper {
+  grid-column: 4 / 5;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 50%;
 }
 
 .Nav a {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.25em;
   text-decoration: none;
   color: aliceblue;
   width: 3em;
+  text-align: center;
+  margin-left: 2em;
 }
 
-.Nav a .active {
-  font-weight: 900;
+/* .isActive {
+  font-weight: 300;
+} */
+
+.Nav a::after {
+  position: absolute;
+  top: 125%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  content: "";
+  border-radius: 1px;
+  transform: scale(0, 1);
+  transition: transform ease-in 150ms;
+}
+.Nav a:hover::after {
+  transform: scale(1, 1);
+}
+
+.cart-button {
+  position: relative;
+  top: 5%;
+}
+
+.item-count {
+  position: absolute;
+  left: 65%;
+  bottom: 75%;
+  font-size: 0.9em;
+  font-weight: 500;
 }
