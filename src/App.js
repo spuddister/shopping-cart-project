@@ -61,7 +61,7 @@ function App() {
             />
           </Routes>
         </div>
-        <footer>
+        <footer className="footer">
           <div className="footer-details">this is the footer</div>
         </footer>
       </div>
