@@ -11,6 +11,13 @@
   /* border: red solid 1px; */
 }
 
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 .logo-container {
   min-height: 30rem;
   min-width: 30rem;
@@ -42,14 +49,43 @@
     cubic-bezier(0.79, 0.14, 0.15, 0.86) 2000ms 1;
 }
 
+.visit-store-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 30rem;
+  transform: scale(0, 0);
+  animation: visit-store 1000ms ease-out 4s 1 forwards;
+}
+
+.visit-store-link {
+  font-size: 2em;
+  font-family: Ubuntu, sans-serif;
+  text-decoration: none;
+  color: dodgerblue;
+  background-color: rgb(204, 204, 204);
+  padding: 1em 2em;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+  max-width: 90%;
+}
+
+.visit-store-link:hover {
+  background-color: rgb(170, 169, 169);
+}
+
 .banner {
-  min-width: 100vw;
+  width: 100vw;
+  min-width: 60rem;
   background-color: rgb(121, 121, 121);
   color: white;
   display: flex;
   justify-content: center;
-  height: 25%;
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.753);
+  height: 10em;
+  box-shadow: 0 -3px 10px rgb(0, 0, 0);
+  font-family: "Calligraffitti", cursive;
+  font-weight: 300;
+  font-size: 2em;
 }
 
 .banner-message {
@@ -60,9 +96,6 @@
 
 .banner-message > * {
   flex: 1 1 100%;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-size: 2em;
 }
 
 .message-one {
@@ -77,6 +110,7 @@
 .message-three {
   text-align: center;
   font-weight: 500;
+  font-family: ubuntu, sans-serif;
 }
 
 @keyframes logo-main-animation {
@@ -87,5 +121,11 @@
 @keyframes logo-secondary-animation {
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@keyframes visit-store {
+  100% {
+    transform: scale(1, 1);
   }
 }
