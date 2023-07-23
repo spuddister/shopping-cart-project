@@ -12,15 +12,17 @@ function ShoppingCart({
   const cartArray = Object.keys(cart);
   return (
     <div className={`ShoppingCart ${cartClass}`}>
-      <h1>Shopping Cart</h1>
-      <button onClick={() => toggleCartVisible()}>x</button>
+      <h1 className="cart-title">Cart</h1>
+      <button className="close-cart-button" onClick={() => toggleCartVisible()}>
+        Close
+      </button>
       {cartArray.length === 0 ? (
-        <p>Your cart is currently empty.</p>
+        <p className="empty-cart-message">Your cart is currently empty.</p>
       ) : (
         <ul>
           {cartArray.map((itemID) => {
             return (
-              <li key={itemID}>
+              <li className="cart-item" key={itemID}>
                 <CartItem
                   itemData={cart[itemID]}
                   addToCart={addToCart}

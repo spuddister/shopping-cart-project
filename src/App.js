@@ -5,6 +5,7 @@ import Nav from "./Components/Nav/Nav";
 import Home from "./Components/Home/Home";
 import Store from "./Components/Store/Store";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
+import { FaGithub } from "react-icons/fa";
 
 function App() {
   const [cart, setCart] = useState({});
@@ -62,7 +63,16 @@ function App() {
           </Routes>
         </div>
         <footer className="footer">
-          <div className="footer-details">this is the footer</div>
+          <p className="footer-content">
+            Copyright © 2023 |
+            <a
+              class="link"
+              href="https://github.com/spuddister"
+              target="_blank"
+            >
+              <FaGithub></FaGithub> spuddister
+            </a>
+          </p>
         </footer>
       </div>
     </BrowserRouter>

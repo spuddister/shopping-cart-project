@@ -12,8 +12,28 @@
   background-color: grey;
   opacity: 0;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
 }
 .cart-visible {
   opacity: 1;
   transform: scale(1, 1);
+}
+
+.cart-title {
+}
+
+.close-cart-button {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 0.25em;
+  max-width: fit-content;
+  padding: 0.5em 2em;
+}
+
+.empty-cart-message {
+}
+
+.cart-item {
 }
