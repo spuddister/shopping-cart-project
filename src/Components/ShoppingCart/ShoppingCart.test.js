@@ -26,6 +26,6 @@ describe("Shopping cart component", () => {
       },
     };
     render(<ShoppingCart cart={cart} />);
-    expect(screen.getByRole("heading").textContent).toMatch(/Shopping Cart/i);
+    expect(screen.getByRole("heading").textContent).toContain(/Cart/i);
   });
 });

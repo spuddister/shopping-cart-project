@@ -1,11 +1,12 @@
 .ShoppingCart {
   width: 25em;
   height: 100vh;
-  transition: ease-in-out 250ms;
-  transition-property: opacity, transform;
   position: absolute;
   top: 0;
   right: 0;
+  transition: transform ease-in-out 250ms;
+  transition: opacity ease-in-out 150ms;
+  transition-property: opacity, transform;
   transform-origin: right;
   transform: scale(0, 1);
   background-color: rgb(226, 225, 221);
@@ -64,4 +65,19 @@
 .checkout-wrapper {
   margin-top: auto;
   padding: 1em 0.5em;
+  border: 1px solid black;
+}
+
+.subtotal,
+.tax,
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  font-size: 1.25em;
+}
+
+.checkout {
 }
