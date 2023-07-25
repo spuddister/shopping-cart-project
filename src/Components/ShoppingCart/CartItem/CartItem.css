@@ -1,0 +1,13 @@
+.cart-item {
+  margin-top: 1em;
+  font-weight: 300;
+}
+
+.cart-item::nth-child(2) {
+  text-align: right;
+  background-color: aqua;
+}
+
+.count-wrapper {
+  display: flex;
+}

@@ -7,10 +7,6 @@
   align-items: center;
 }
 
-.banner * {
-  /* border: red solid 1px; */
-}
-
 .content {
   flex-grow: 1;
   display: flex;
@@ -77,7 +73,7 @@
 .banner {
   width: 100vw;
   min-width: 60rem;
-  background-color: rgb(240, 238, 233);
+  background-color: rgb(245, 245, 239);
   color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;

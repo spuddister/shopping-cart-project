@@ -36,6 +36,10 @@ function App() {
     setCart(tempCart);
   };
 
+  const emptyCart = () => {
+    setCart({});
+  };
+
   const toggleCartVisible = () => {
     cartVisible ? setCartVisible(false) : setCartVisible(true);
   };
@@ -50,6 +54,7 @@ function App() {
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           toggleCartVisible={toggleCartVisible}
+          emptyCart={emptyCart}
         />
         <div className="page-container">
           <Routes>
@@ -66,7 +71,7 @@ function App() {
           <p className="footer-content">
             Copyright © 2023 |
             <a
-              class="link"
+              className="link"
               href="https://github.com/spuddister"
               target="_blank"
               rel="noreferrer"

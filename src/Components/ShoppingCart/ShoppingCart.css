@@ -52,9 +52,16 @@
 .empty-cart-message {
   text-align: center;
   padding: 2em 1em;
+  font-weight: 300;
 }
 
-.cart-item {
-  margin-top: 1em;
-  font-weight: 300;
+.cart-list {
+  list-style: none;
+  padding: 0.5em 0;
+  overflow: scroll;
+}
+
+.checkout-wrapper {
+  margin-top: auto;
+  padding: 1em 0.5em;
 }
