@@ -69,8 +69,9 @@ function App() {
               class="link"
               href="https://github.com/spuddister"
               target="_blank"
+              rel="noreferrer"
             >
-              <FaGithub></FaGithub> spuddister
+              <FaGithub /> spuddister
             </a>
           </p>
         </footer>

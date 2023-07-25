@@ -1,6 +1,7 @@
 import "./ShoppingCart.css";
 import CartItem from "./CartItem/CartItem";
 import React from "react";
+import { FaShoppingCart } from "react-icons/fa";
 
 function ShoppingCart({
   cartClass,
@@ -12,10 +13,18 @@ function ShoppingCart({
   const cartArray = Object.keys(cart);
   return (
     <div className={`ShoppingCart ${cartClass}`}>
-      <h1 className="cart-title">Cart</h1>
-      <button className="close-cart-button" onClick={() => toggleCartVisible()}>
-        Close
-      </button>
+      <div className="cart-header">
+        <button
+          className="close-cart-button"
+          onClick={() => toggleCartVisible()}
+        >
+          Close
+        </button>
+        <h1 className="cart-title">
+          <FaShoppingCart className="cart-icon" /> Cart
+        </h1>
+      </div>
+
       {cartArray.length === 0 ? (
         <p className="empty-cart-message">Your cart is currently empty.</p>
       ) : (

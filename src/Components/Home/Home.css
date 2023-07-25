@@ -63,7 +63,7 @@
   font-family: Ubuntu, sans-serif;
   text-decoration: none;
   color: dodgerblue;
-  background-color: rgb(204, 204, 204);
+  background-color: rgb(240, 238, 233);
   padding: 1em 2em;
   border-radius: 5px;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.418);
@@ -71,18 +71,18 @@
 }
 
 .visit-store-link:hover {
-  background-color: rgb(170, 169, 169);
+  background-color: rgb(223, 221, 215);
 }
 
 .banner {
   width: 100vw;
   min-width: 60rem;
-  background-color: rgb(121, 121, 121);
-  color: white;
+  background-color: rgb(240, 238, 233);
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   height: 10em;
-  box-shadow: 0 5px 20px 2px rgb(0, 0, 0);
+  box-shadow: 0 5px 15px 2px rgb(173, 173, 173);
   font-family: "Calligraffitti", cursive;
   font-weight: 300;
   font-size: 2em;
