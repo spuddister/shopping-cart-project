@@ -1,9 +1,9 @@
 import "./Store.css";
 import React from "react";
-import ItemList from "./ItemList";
+import ItemList from "./ItemList/ItemList";
 import { useState, useEffect } from "react";
 
-function Store({ addToCart, removeFromCart }) {
+function Store({ addToCart }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [storeContent, setStoreContent] = useState([]);
   useEffect(() => {
@@ -15,6 +15,7 @@ function Store({ addToCart, removeFromCart }) {
           // console.log("inside fetch:", json);
           setStoreContent(json);
           setIsLoaded(true);
+          console.log(json);
         });
     }
     try {
@@ -28,11 +29,7 @@ function Store({ addToCart, removeFromCart }) {
     <div className="Store">
       <h1>Store</h1>
       {isLoaded ? (
-        <ItemList
-          storeContent={storeContent}
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-        />
+        <ItemList storeContent={storeContent} addToCart={addToCart} />
       ) : (
         <div>item list is loading icon</div>
       )}

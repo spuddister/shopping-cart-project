@@ -3,8 +3,6 @@ import CartItem from "./CartItem/CartItem";
 import React from "react";
 import { Link } from "react-router-dom";
 
-//NEXT STEP IS TO CALCULATE THE TOTAL AND TAX AMOUNTS
-
 function ShoppingCart({
   cartClass,
   cart,

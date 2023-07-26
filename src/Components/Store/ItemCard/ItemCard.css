@@ -1,0 +1,25 @@
+.item-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 12em;
+  aspect-ratio: 3/5;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-image {
+  max-height: 10em;
+  max-width: 10em;
+}
+
+.add-to-cart-button {
+  margin-top: auto;
+}
+
+.image-is-loaded {
+  display: block;
+}
+
+.image-not-loaded {
+  display: none;
+}
