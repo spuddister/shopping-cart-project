@@ -11,10 +11,12 @@
   transform: scale(0, 1);
   background-color: rgb(226, 225, 221);
   opacity: 0;
-  z-index: 100;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   padding: 1em;
+  padding-top: 5em;
+  padding-bottom: 2.5em;
   font-family: ubuntu, sans-serif;
 }
 .cart-visible {
@@ -60,12 +62,15 @@
   list-style: none;
   padding: 0.5em 0;
   overflow: scroll;
+  margin: 1em 0;
 }
 
 .checkout-wrapper {
   margin-top: auto;
   padding: 1em 0.5em;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .subtotal,
@@ -76,8 +81,28 @@
 }
 
 .total {
-  font-size: 1.25em;
+  font-size: 1.35em;
 }
 
 .checkout {
+  background-color: black;
+  color: white;
+  border-radius: 0.25em;
+  padding: 0.5em 2em;
+  align-self: center;
+  text-decoration: none;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+.checkout:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px -5px black;
+}
+
+.checkout:focus {
+  background-color: white;
+  color: black;
 }

@@ -1,7 +1,6 @@
 import "./ShoppingCart.css";
 import CartItem from "./CartItem/CartItem";
 import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 //NEXT STEP IS TO CALCULATE THE TOTAL AND TAX AMOUNTS
@@ -14,7 +13,13 @@ function ShoppingCart({
   toggleCartVisible,
   emptyCart,
 }) {
+  let cartSubtotal = 0;
+
   const cartArray = Object.keys(cart);
+  cartArray.forEach((item) => {
+    cartSubtotal += cart[item].price * cart[item].count;
+  });
+
   return (
     <div className={`ShoppingCart ${cartClass}`}>
       <div className="cart-header">
@@ -24,9 +29,7 @@ function ShoppingCart({
         >
           Close
         </button>
-        <h1 className="cart-title">
-          <FaShoppingCart className="cart-icon" /> Cart
-        </h1>
+        <h1 className="cart-title">Cart</h1>
       </div>
 
       {cartArray.length === 0 ? (
@@ -51,15 +54,30 @@ function ShoppingCart({
         <div className="checkout-wrapper">
           <div className="subtotal">
             <span>Subtotal: </span>
-            <span>138$</span>
+            <span>
+              {cartSubtotal.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              })}
+            </span>
           </div>
           <div className="tax">
             <span>Estimated Tax: </span>
-            <span>69$</span>
+            <span>
+              {(cartSubtotal * 0.13).toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              })}
+            </span>
           </div>
           <div className="total">
             <span>Total: </span>
-            <span>450$</span>
+            <span>
+              {(cartSubtotal * 1.13).toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              })}
+            </span>
           </div>
 
           <Link

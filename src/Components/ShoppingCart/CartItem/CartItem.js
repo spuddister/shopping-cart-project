@@ -12,7 +12,7 @@ function CartItem({ itemData, addToCart, removeFromCart }) {
           <button onClick={() => addToCart(itemData)}>+</button>
         </div>
         <p className="item-price">
-          {itemData.price.toLocaleString("en-US", {
+          {(itemData.price * itemData.count).toLocaleString("en-US", {
             style: "currency",
             currency: "USD",
           })}
