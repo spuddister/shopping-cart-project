@@ -1,6 +1,8 @@
 .cart-item {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
   font-weight: 300;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5em;
 }
 
 .item-details-wrapper {
@@ -40,4 +42,30 @@
   margin: 0 0.25em;
   background-color: white;
   border-radius: 2px;
+}
+
+.count-wrapper button:hover {
+  background-color: rgb(26, 26, 26);
+  cursor: pointer;
+}
+
+.count-wrapper button:active {
+  background-color: grey;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-image-container img {
+  max-height: 7em;
+  max-width: 7em;
+  padding: 0.25em;
+  background-color: white;
+}
+
+.cart-image-container {
+  border: 1px solid black;
 }

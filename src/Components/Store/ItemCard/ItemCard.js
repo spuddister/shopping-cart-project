@@ -1,6 +1,7 @@
 import "./ItemCard.css";
 import React from "react";
 import { useState } from "react";
+import Spinner from "../../Spinner/Spinner";
 
 function Item({ itemData, addToCart }) {
   // console.log("item info: ", itemData);
@@ -21,13 +22,13 @@ function Item({ itemData, addToCart }) {
           />
         ) : (
           <>
-            <div>loading icon</div>
             <img
               className={"item-image image-not-loaded"}
               src={itemData.image}
               alt={itemData.title}
-              onLoad={imageLoaded()}
+              onLoad={imageLoaded}
             />
+            <Spinner />
           </>
         )}
       </div>
