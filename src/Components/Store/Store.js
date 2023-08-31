@@ -31,7 +31,7 @@ function Store({ addToCart }) {
 
   const filterList = (e) => {
     setFilterValue(e.target.value);
-    if (e.target.value === "none") {
+    if (e.target.value === "all") {
       setFilteredContent(storeContent);
       setTitle("All Items");
       return;
@@ -46,21 +46,25 @@ function Store({ addToCart }) {
   return (
     <div className="Store">
       <div className="store-header">
-        <h1 className="store-title">{title}</h1>
+        <h1 className="store-title">
+          {title}{" "}
+          <span className="product-count">{`(${filteredContent.length} Products)`}</span>
+        </h1>
         <div className="list-controls">
+          <div className="filter-title">Category</div>
           <div className="filter-wrapper">
-            Filter
-            <fieldset>
+            <div className="radio-wrapper">
               <input
                 type="radio"
                 name="filter"
-                value="none"
-                id="none"
-                checked={filterValue === "none"}
+                value="all"
+                id="all"
+                checked={filterValue === "all"}
                 onChange={filterList}
               />
-              <label htmlFor="none">None</label>
-
+              <label htmlFor="all">All Items</label>
+            </div>
+            <div className="radio-wrapper">
               <input
                 type="radio"
                 name="filter"
@@ -70,7 +74,8 @@ function Store({ addToCart }) {
                 onChange={filterList}
               />
               <label htmlFor="men">Men's Clothing</label>
-
+            </div>
+            <div className="radio-wrapper">
               <input
                 type="radio"
                 name="filter"
@@ -80,7 +85,8 @@ function Store({ addToCart }) {
                 onChange={filterList}
               />
               <label htmlFor="women">Women's Clothing</label>
-
+            </div>
+            <div className="radio-wrapper">
               <input
                 type="radio"
                 name="filter"
@@ -90,7 +96,8 @@ function Store({ addToCart }) {
                 onChange={filterList}
               />
               <label htmlFor="jewelery">Jewelery</label>
-
+            </div>
+            <div className="radio-wrapper">
               <input
                 type="radio"
                 name="filter"
@@ -100,7 +107,7 @@ function Store({ addToCart }) {
                 onChange={filterList}
               />
               <label htmlFor="electronics">Electronics</label>
-            </fieldset>
+            </div>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@
   height: 90vh;
   grid-column: 2/3;
   overflow: scroll;
+  font-family: Ubuntu, sans-serif;
 }
 
 .item-list {
@@ -14,5 +15,48 @@
   margin-top: 2em;
 }
 
+.store-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .store-title {
+  margin: 1em 0;
+  align-items: left;
+  font-weight: 900;
+}
+
+.product-count {
+  font-weight: 300;
+  margin-left: 1em;
+}
+
+.filter-title {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.filter-wrapper {
+  display: flex;
+  gap: 1em;
+  margin: 0.5em 0;
+}
+
+.radio-wrapper {
+  border: 1px solid black;
+  padding: 0.25em 1em;
+}
+
+.radio-wrapper input {
+  appearance: none;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 1em;
+  width: 1em;
+  margin-right: 0.25em;
+}
+
+.radio-wrapper input:checked {
+  background-color: dodgerblue;
 }
