@@ -32,8 +32,8 @@ function Item({ itemData, addToCart }) {
           </>
         )}
       </div>
-      <p>{itemData.title}</p>
-      <p>
+      <p className="item-card-title">{itemData.title}</p>
+      <p className="item-card-price">
         {itemData.price.toLocaleString("en-US", {
           style: "currency",
           currency: "USD",

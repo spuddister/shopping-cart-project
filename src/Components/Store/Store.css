@@ -12,7 +12,7 @@
   overflow: scroll;
   max-height: 100%;
   max-width: 60em;
-  margin-top: 2em;
+  margin-top: 0.5em;
 }
 
 .store-header {
@@ -25,6 +25,8 @@
   margin: 1em 0;
   align-items: left;
   font-weight: 900;
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-count {

@@ -8,7 +8,7 @@ function Store({ addToCart }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [storeContent, setStoreContent] = useState([]);
   const [filteredContent, setFilteredContent] = useState([]);
-  const [filterValue, setFilterValue] = useState("none");
+  const [filterValue, setFilterValue] = useState("all");
   const [title, setTitle] = useState("All Items");
 
   useEffect(() => {
